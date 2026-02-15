@@ -1,11 +1,14 @@
 package com.sathwikhbhat.apiexecutiontracker.aspect;
 
 import com.sathwikhbhat.apiexecutiontracker.config.TrackerProperties;
+import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 @Aspect
 public class ExecutionTimeAspect {
@@ -30,12 +33,32 @@ public class ExecutionTimeAspect {
             long duration = convert(durationNs);
 
             if (logger.isInfoEnabled() && duration >= properties.getThreshold()) {
-                logger.info(
-                        "{} executed in {} {}",
-                        joinPoint.getSignature().toShortString(),
-                        duration,
-                        properties.getTimeUnit().name().toLowerCase()
-                );
+                ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+
+                if (requestAttributes != null) {
+                    HttpServletRequest request = requestAttributes.getRequest();
+
+                    String method = request.getMethod();
+                    String path = request.getRequestURI();
+
+                    String query = request.getQueryString();
+                    String fullPath = (query == null) ? path : path + "?" + query;
+
+                    logger.info(
+                            "{} {} executed in {} {}",
+                            method,
+                            fullPath,
+                            duration,
+                            properties.getTimeUnit().name().toLowerCase()
+                    );
+                } else {
+                    logger.info(
+                            "{} executed in {} {}",
+                            joinPoint.getSignature().toShortString(),
+                            duration,
+                            properties.getTimeUnit().name().toLowerCase()
+                    );
+                }
             }
         }
     }
