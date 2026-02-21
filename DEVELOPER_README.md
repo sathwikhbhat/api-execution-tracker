@@ -2,6 +2,7 @@
 
 [![Java 21+](https://img.shields.io/badge/Java-21%2B-E76F00)](#environment)
 [![Spring Boot 4+](https://img.shields.io/badge/Spring%20Boot-4%2B-2E7D32)](#compatibility)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.sathwikhbhat/api-execution-tracker)](https://central.sonatype.com/artifact/io.github.sathwikhbhat/api-execution-tracker)
 [![Maven](https://img.shields.io/badge/Build-Maven-C71A36)](#build--verify)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3B82F6)](LICENSE)
 
