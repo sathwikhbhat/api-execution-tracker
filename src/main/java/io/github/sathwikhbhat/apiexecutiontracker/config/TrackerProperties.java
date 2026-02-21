@@ -9,6 +9,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class TrackerProperties {
 
     /**
+     * Creates tracker properties with default values.
+     */
+    public TrackerProperties() {
+    }
+
+    /**
      * Enables or disables the tracker autoconfiguration.
      */
     private boolean enabled = true;

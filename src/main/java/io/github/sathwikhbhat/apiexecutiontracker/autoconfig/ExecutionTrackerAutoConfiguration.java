@@ -16,6 +16,12 @@ import org.springframework.context.annotation.Configuration;
 public class ExecutionTrackerAutoConfiguration {
 
     /**
+     * Creates the autoconfiguration class.
+     */
+    public ExecutionTrackerAutoConfiguration() {
+    }
+
+    /**
      * Creates the AOP aspect responsible for execution-time logging.
      *
      * @param properties bound tracker configuration properties

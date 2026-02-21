@@ -20,6 +20,11 @@ public class ExecutionTimeAspect {
     private static final Logger logger = LoggerFactory.getLogger(ExecutionTimeAspect.class);
     private final TrackerProperties properties;
 
+    /**
+     * Creates the execution-time aspect with tracker configuration.
+     *
+     * @param properties tracker configuration properties
+     */
     public ExecutionTimeAspect(TrackerProperties properties) {
         this.properties = properties;
     }
