@@ -9,8 +9,8 @@
 API Execution Tracker is a Spring Boot starter that measures and logs endpoint execution time using AOP and a single annotation.
 
 > [!WARNING]
-> This dependency supports **Spring Boot 4+ only**.
-> It is **not compatible with Spring Boot 3.x**.
+> Supports **Spring Boot 4+** with **Java 21+**<br>
+> Spring Boot 3.x and Java versions below 21 are not supported.<br>
 
 
 ## Environment
@@ -85,7 +85,7 @@ Working flow:
 | Central publishing plugin | `org.sonatype.central:central-publishing-maven-plugin` |
 | Publishing server id | `central` |
 
-Official dependency page: [Maven Central Repository: API Execution Tracker](https://central.sonatype.com/artifact/io.github.sathwikhbhat/api-execution-tracker)
+You can also find this dependency and usage details for other build tools (Gradle, etc.) on the [Maven Central Repository](https://central.sonatype.com/artifact/io.github.sathwikhbhat/api-execution-tracker) page for API Execution Tracker.
 
 
 ## Contributing

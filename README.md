@@ -9,8 +9,8 @@
 Measure and log API execution time in Spring Boot with one annotation, automatic setup, and configurable thresholds.
 
 > [!WARNING]
-> This dependency supports **Spring Boot 4+ only**.
-> It is **not compatible with Spring Boot 3.x**.
+> Supports **Spring Boot 4+** with **Java 21+**<br>
+> Spring Boot 3.x and Java versions below 21 are not supported.<br>
 
 ## Why Use It
 - Track execution time using one annotation: `@TrackExecutionTime`
@@ -30,8 +30,7 @@ Add this dependency in your application `pom.xml`:
 </dependency>
 ```
 
-Official dependency page:
-[Maven Central Repository: API Execution Tracker](https://central.sonatype.com/artifact/io.github.sathwikhbhat/api-execution-tracker)
+You can also find this dependency and usage details for other build tools (Gradle, etc.) on the [Maven Central Repository](https://central.sonatype.com/artifact/io.github.sathwikhbhat/api-execution-tracker) page for API Execution Tracker.
 
 ## Usage
 Annotate a class or specific methods:
