@@ -20,6 +20,7 @@ Measure and log API execution time in Spring Boot with one annotation, automatic
 - Autoconfiguration when dependency is present
 
 ## Installation
+### Maven
 Add this dependency in your application `pom.xml`:
 
 ```xml
@@ -30,7 +31,16 @@ Add this dependency in your application `pom.xml`:
 </dependency>
 ```
 
-You can also find this dependency and usage details for other build tools (Gradle, etc.) on the [Maven Central Repository](https://central.sonatype.com/artifact/io.github.sathwikhbhat/api-execution-tracker) page for API Execution Tracker.
+### Gradle
+Add this dependency in your application `build.gradle.kts`:
+
+```kotlin
+implementation("io.github.sathwikhbhat:api-execution-tracker:1.0.0")
+```
+<br>
+
+> [!NOTE]
+> You can also find this dependency and usage details for other build tools (sbt, ivy, grape etc.) on the [Maven Central Repository](https://central.sonatype.com/artifact/io.github.sathwikhbhat/api-execution-tracker) page for API Execution Tracker.
 
 ## Usage
 Annotate a class or specific methods:
