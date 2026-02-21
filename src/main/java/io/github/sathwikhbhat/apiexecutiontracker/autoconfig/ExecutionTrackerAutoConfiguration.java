@@ -1,7 +1,7 @@
-package com.sathwikhbhat.apiexecutiontracker.autoconfig;
+package io.github.sathwikhbhat.apiexecutiontracker.autoconfig;
 
-import com.sathwikhbhat.apiexecutiontracker.aspect.ExecutionTimeAspect;
-import com.sathwikhbhat.apiexecutiontracker.config.TrackerProperties;
+import io.github.sathwikhbhat.apiexecutiontracker.aspect.ExecutionTimeAspect;
+import io.github.sathwikhbhat.apiexecutiontracker.config.TrackerProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

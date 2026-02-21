@@ -1,4 +1,4 @@
-package com.sathwikhbhat.apiexecutiontracker.config;
+package io.github.sathwikhbhat.apiexecutiontracker.config;
 
 public enum TimeUnitType {
     SECONDS,

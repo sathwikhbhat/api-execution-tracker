@@ -1,6 +1,6 @@
-package com.sathwikhbhat.apiexecutiontracker.aspect;
+package io.github.sathwikhbhat.apiexecutiontracker.aspect;
 
-import com.sathwikhbhat.apiexecutiontracker.config.TrackerProperties;
+import io.github.sathwikhbhat.apiexecutiontracker.config.TrackerProperties;
 import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -21,8 +21,8 @@ public class ExecutionTimeAspect {
     }
 
 
-    @Around("@within(com.sathwikhbhat.apiexecutiontracker.annotation.TrackExecutionTime) || " +
-            "@annotation(com.sathwikhbhat.apiexecutiontracker.annotation.TrackExecutionTime)")
+    @Around("@within(io.github.sathwikhbhat.apiexecutiontracker.annotation.TrackExecutionTime) || " +
+            "@annotation(io.github.sathwikhbhat.apiexecutiontracker.annotation.TrackExecutionTime)")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.nanoTime();
         try {

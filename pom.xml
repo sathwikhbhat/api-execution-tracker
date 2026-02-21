@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.sathwikhbhat</groupId>
+    <groupId>io.github.sathwikhbhat</groupId>
     <artifactId>api-execution-tracker</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>

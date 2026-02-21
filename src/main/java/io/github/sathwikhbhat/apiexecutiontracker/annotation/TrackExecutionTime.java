@@ -1,4 +1,4 @@
-package com.sathwikhbhat.apiexecutiontracker.annotation;
+package io.github.sathwikhbhat.apiexecutiontracker.annotation;
 
 import java.lang.annotation.*;
 
